@@ -49,6 +49,18 @@ alias cmsg='ruby ~/commit_message.rb'
 alias cms='ruby ~/commit_message.rb'
 alias gsync="git_synchronyze"
 
+# Spotify
+
+alias spplay="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play"
+alias sppause="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause"
+alias sptoggle="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+alias spnext="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+alias spprevious="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+
+# Docker
+
+alias dc="docker-compose"
+
 # Change Directory
 
 alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
@@ -77,3 +89,4 @@ alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 alias password='~/code/alexandrebk/password/target/release/password'
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
 alias space="du -sh * | sort -h"
+

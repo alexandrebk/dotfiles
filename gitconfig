@@ -11,7 +11,7 @@
 
 [core]
   pager = less -FRSX
-	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
+	editor = subl -n -w  >/dev/null 2>&1
 	# editor = 'vim'
 
 [alias]
@@ -58,3 +58,6 @@
 	required = true
 [commit]
 	template = /Users/alexandrebouvier/.gitmessage.txt
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
