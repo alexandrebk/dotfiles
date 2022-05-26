@@ -51,9 +51,9 @@ alias gsync="git_synchronyze"
 
 # Change Directory
 
-alias mrp='cd ~/gitlab.peersandpeers/mrpeinture/mrpeinture  '
-alias anx='cd ~/gitlab.peersandpeers/lesateliersnx/lesateliersnx'
-alias matech='cd ~/gitlab.peersandpeers/lesateliersnx/matech'
+alias mrp='cd ~/gitlab/peersandpeers/mrpeinture/mrpeinture  '
+alias anx='cd ~/gitlab/peersandpeers/lesateliersnx/lesateliersnx'
+alias matech='cd ~/gitlab/peersandpeers/lesateliersnx/matech'
 alias abk='cd ~/code/alexandrebk'
 alias poplace='cd ~/code/alexandrebk/shopify_picanova_api'
 alias nysa='cd ~/code/alexandrebk/connector_nysa'
@@ -62,7 +62,7 @@ alias timeplanet='cd ~/code/TimeForPlanet/time-planet'
 alias time='cd ~/code/TimeForPlanet/time-planet'
 alias dotfiles='cd ~/code/alexandrebk/dotfiles'
 alias formation='cd ~/code/alexandrebk/db_schema_multiuser_app'
-alias oenoplace='cd ~/code/JeremyMIQUEL/oenoplace'
+alias vera='cd ~/gitlab/captive/vera'
 
 # Browser
 
