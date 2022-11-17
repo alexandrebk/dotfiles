@@ -131,3 +131,7 @@ First we need to create a remote name `s3`
 To download files to AWS --> `rclone copy s3:my-new-space my_path`
 
 To upload files to AWS --> `rclone copy my_path s3:my-new-space/my_path`
+
+### Ressources externes
+
+[Configure ton MacBook comme ça ou juste jette-le ! par cocadmin](https://www.youtube.com/watch?v=uj5pUzr2fec&ab_channel=cocadmin)
