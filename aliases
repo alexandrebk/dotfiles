@@ -42,38 +42,39 @@ alias gfix="git commit -a --amend --no-edit"
 alias gwip="gaa && git commit -m 'Minor changes' && git push"
 alias grefacto="gaa && git commit -m 'Refacto'"
 alias gpush='NAME=$(git symbolic-ref HEAD | sed -e "s,.*/\(.*\),\1,") && git push origin "$NAME"'
-alias gitm="git checkout master"
-alias gpull='git pull origin master'
-alias gmsg='git commit --message'
-alias cmsg='ruby ~/commit_message.rb'
-alias cms='ruby ~/commit_message.rb'
-alias gsync="git_synchronyze"
 
 # Change Directory
 
 alias mrp='cd ~/gitlab/peersandpeers/mrpeinture/mrpeinture  '
 alias anx='cd ~/gitlab/peersandpeers/lesateliersnx/lesateliersnx'
 alias matech='cd ~/gitlab/peersandpeers/lesateliersnx/matech'
+alias veraapp='cd ~/gitlab/captive/vera/vera-application'
+alias verapp='cd ~/gitlab/captive/vera/vera-application'
+alias vera='cd ~/gitlab/captive/vera/vera-serveur'
+
 alias abk='cd ~/code/alexandrebk'
-alias poplace='cd ~/code/alexandrebk/shopify_picanova_api'
-alias nysa='cd ~/code/alexandrebk/connector_nysa'
+alias cv='cd ~/code/alexandrebk/curriculum-vitae'
+alias dotfiles='cd ~/code/alexandrebk/dotfiles'
+alias blog='cd ~/code/alexandrebk/alexandrebk.github.io'
+alias lectures='cd ~/code/alexandrebk/blog_lectures'
+alias formation='cd ~/code/alexandrebk/db_schema_multiuser_app'
+alias invoices='cd ~/code/alexandrebk/invoices-auto-entrepreneur'
+
 alias moncdi='cd ~/code/moncdi/webapp'
 alias timeplanet='cd ~/code/TimeForPlanet/time-planet'
 alias time='cd ~/code/TimeForPlanet/time-planet'
-alias dotfiles='cd ~/code/alexandrebk/dotfiles'
-alias formation='cd ~/code/alexandrebk/db_schema_multiuser_app'
-alias vera='cd ~/gitlab/captive/vera'
+alias goee='cd ~/code/drakkr-team/go-epargne-entreprise'
+alias paillette='cd ~/code/StudioPaillette/studio_paillette'
+alias karus='cd ~/code/agence-karus/agence-karus.github.io'
+alias kinship='cd ~/code/kinship4lab/kinship-webapp'
 
 # Browser
 
-alias lequipe='open https://www.lequipe.fr/'
-alias lemonde='open https://www.lemonde.fr/'
-alias lefigaro='open https://www.lefigaro.fr/'
-alias gitlab='open https://gitlab.peersandpeers.com/lesateliersnx/lesateliersnx/-/merge_requests'
 alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 
 # Miscellaneous
 
+alias space="du -sh * | sort -h"
 alias password='~/code/alexandrebk/password/target/release/password'
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
-alias space="du -sh * | sort -h"
+alias runner="rails runner test.rb"
