@@ -1,13 +1,4 @@
-begin
-  require 'rubygems'
-  require 'pry'
-  require 'awesome_print'
-  # if ENV['RAILS_ENV']
-  #   require 'rails/console/app'
-  #   include Rails::ConsoleMethods
-  # end
-rescue LoadError
-end
+puts "Loadind .irbrc file"
 
 if defined?(Rails)
   def toto
@@ -18,4 +9,10 @@ end
 if defined?(Pry)
   Pry.start
   exit
+end
+
+class Object
+  def local_methods
+    (methods - Object.instance_methods).sort
+  end
 end
