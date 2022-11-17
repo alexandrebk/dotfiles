@@ -21,13 +21,13 @@ export PATH="${HOME}/.rbenv/bin:${PATH}"
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
 
 # Load nvm (to manage your node versions)
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Call `nvm use` automatically in a directory with a `.nvmrc` file
 autoload -U add-zsh-hook
@@ -105,3 +105,6 @@ export PYTHONBREAKPOINT=ipdb.set_trace
 
 # Scalingo auto completion
 source ~/.zsh/completion/scalingo_complete.zsh
+
+# All files for
+export PATH="$HOME/bin:$PATH"
