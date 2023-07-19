@@ -3,6 +3,10 @@ runtime macros/matchit.vim
 set nocompatible      " Nécessaire
 filetype off          " Nécessaire
 
+" To enable mouse support
+" Now you can click anywhere on Vim and your cursor will go there!
+set mouse=a
+
 " Ajout de Vundle au runtime path et initialisation
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
