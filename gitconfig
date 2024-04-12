@@ -21,22 +21,21 @@
   br = branch
   ci = commit
   fo = fetch origin
-  d = !git --no-pager diff
   dt  = difftool
   stat = !git --no-pager diff --stat
 
   # Clean merged branches
-  sweep = !git branch --merged main | grep -v 'main$' | xargs git branch -d && git remote prune origin
+  sweep = !git branch --merged develop | grep -v 'develop$' | xargs git branch -d && git remote prune origin
 
   # http://www.jukie.net/bart/blog/pimping-out-git-log
   lg = log --graph --all --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)%an%Creset %C(yellow)%d%Creset'
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ad) %C(bold blue)%an%Creset %C(yellow)%d%Creset' --date=format:'%Y-%m-%d %H:%M:%S'
 
   # Serve local repo. http://coderwall.com/p/eybtga
   # Then other can access via `git clone git://#{YOUR_IP_ADDRESS}/
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 
-  m = checkout main
+  m = checkout master
   d = checkout develop
 
   # Removes a file from the index
