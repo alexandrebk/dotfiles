@@ -1,12 +1,3 @@
-git_synchronyze () {
-  echo '=== git checkout master ==='
-  git checkout master
-  echo '=== git pull origin master ==='
-  git pull origin master
-  echo '=== git sweep ==='
-  git sweep
-}
-
 youtube () {
   query=""
   for i in "$*"
@@ -48,7 +39,6 @@ alias blog='cd ~/code/alexandrebk/alexandrebk.github.io'
 alias club='cd ~/code/alexandrebk/blog_du_club'
 alias manifesto='cd ~/code/alexandrebk/manifesto'
 alias lectures='cd ~/code/alexandrebk/blog_lectures'
-
 
 # Web Application
 
