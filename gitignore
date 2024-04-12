@@ -6,3 +6,11 @@ config/application.yml
 
 # test.rb
 test.rb
+
+todo.md
+to_do.md
+notes.md
+note.md
+retro.md
+
+test.sql
