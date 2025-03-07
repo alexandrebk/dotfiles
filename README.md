@@ -135,3 +135,12 @@ To upload files to AWS --> `rclone copy my_path s3:my-new-space/my_path`
 ### Ressources externes
 
 [Configure ton MacBook comme ça ou juste jette-le ! par cocadmin](https://www.youtube.com/watch?v=uj5pUzr2fec&ab_channel=cocadmin)
+
+
+### Bat à la place de cat
+
+Installer bat (`brew install bat`) pour pouvoir utiliser l'alias ci-dessous
+
+```
+alias cat="bat"
+```
