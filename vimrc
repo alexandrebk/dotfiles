@@ -11,44 +11,44 @@ set mouse=a
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Vim Plugins
 " On indique à Vundle de s'auto-gérer :)
 Plugin 'gmarik/Vundle.vim'  " Nécessaire
-" Vim Plugins
-" Bundle 'AndrewRadev/vim-eco'
-" Bundle 'Lokaltog/vim-powerline'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'cakebaker/scss-syntax.vim'
-" Bundle 'ervandew/screen'
-" Bundle 'ervandew/supertab'
 Plugin 'godlygeek/tabular'
-" Bundle 'groenewege/vim-less'
-" Bundle 'isRuslan/vim-es6'
-" Bundle 'mxw/vim-jsx'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/quickfixsigns_vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/snippetsEmu'
+Plugin 'chrisbra/matchit'                        " jump to closing tag with % in html
+" Bundle 'AndrewRadev/vim-eco'
+" Bundle 'Lokaltog/vim-powerline'
+" Bundle 'ervandew/screen'
+" Bundle 'ervandew/supertab'
+" Bundle 'groenewege/vim-less'
+" Bundle 'isRuslan/vim-es6'
+" Bundle 'mxw/vim-jsx'
 " Bundle 'mileszs/ack.vim'
 " Bundle 'nviennot/molokai'
 " Bundle 'othree/html5.vim'
 " Bundle 'rking/ag.vim'
 " Bundle 'rodjek/vim-puppet'
 " Bundle 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
 " Bundle 'scrooloose/syntastic'
 " Bundle 'sjl/gundo.vim'
-Plugin 'tomtom/quickfixsigns_vim'
 " Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-surround'
 " Bundle 'vim-scripts/YankRing.vim'
 " Bundle 'yaymukund/vim-rabl'
-
 " Bundle 'tpope/vim-unimpaired'
 " Bundle 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/snippetsEmu'
-Plugin 'chrisbra/matchit'                        " jump to closing tag with % in html
+
 
 """""""""""""""""""
 " MAP
