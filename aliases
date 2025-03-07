@@ -39,6 +39,7 @@ alias blog='cd ~/code/alexandrebk/alexandrebk.github.io'
 alias club='cd ~/code/alexandrebk/blog_du_club'
 alias manifesto='cd ~/code/alexandrebk/manifesto'
 alias lectures='cd ~/code/alexandrebk/blog_lectures'
+alias cremieu='cd ~/code/alexandrebk/cremieu'
 
 # Web Application
 
@@ -50,6 +51,10 @@ alias karus='cd ~/code/agence-karus/agence-karus.github.io'
 alias kinship='cd ~/code/kinship4lab/kinship-webapp'
 alias tpk='cd ~/code/thepackengers/thepackengersapp'
 alias packengers='cd ~/code/thepackengers/thepackengersapp'
+alias baltis='cd ~/code/capsens/baltis'
+alias stomea='cd ~/code/capsens/Stomea'
+alias dummy='cd ~/code/capsens/dummy-invest-locatif'
+alias capsens='cd ~/code/capsens'
 
 # Browser
 
@@ -61,3 +66,5 @@ alias space="du -sh * | sort -h"
 alias password='~/code/alexandrebk/password/target/release/password'
 alias search="grep -R --exclude-dir={node_modules,tmp,log,public,.git}"
 alias runner="rails runner test.rb"
+alias test="rails runner test.rb"
+alias cat="bat"
