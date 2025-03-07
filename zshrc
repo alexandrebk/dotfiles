@@ -72,14 +72,19 @@ echo 'Install the macvim shell'
 ### Install the macvim shell
 export PATH="${PATH}:/Applications/MacVim.app/Contents/bin"
 
+
+
 echo 'store your own aliases'
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
 echo 'encoding stuff'
 # Encoding stuff for the terminal
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+#export LANG="fr_FR.UTF-8"
+#export LC_ALL="fr_FR.UTF-8"
+
 
 # For tmuxinator
 export EDITOR=vim
@@ -115,7 +120,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Scalingo auto completion
 # source ~/.zsh/completion/scalingo_complete.zsh
 
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # All files for
 export PATH="$HOME/code/alexandrebk/dotfiles/bin:$PATH"
-
 echo 'Setup loaded from zshrc'
+export PATH=$PATH:~/.npm-global/bin
+export BAT_THEME="Monokai"
