@@ -37,8 +37,4 @@ if defined?(Rails)
   }
 
   IRB.conf[:PROMPT_MODE] = :RAILS
-
-  module Rails::ConsoleMethods
-    alias r reload!
-  end
 end
