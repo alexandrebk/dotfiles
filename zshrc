@@ -125,4 +125,18 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 export PATH="$HOME/code/alexandrebk/dotfiles/bin:$PATH"
 echo 'Setup loaded from zshrc'
 export PATH=$PATH:~/.npm-global/bin
-export BAT_THEME="Monokai"
+export BAT_THEME="Monokai Extended Origin"
+
+# replace
+function replace() {
+  if [[ $# -ne 2 ]]; then
+    echo "Usage: replace <ancien_mot> <nouveau_mot>"
+    return 1
+  fi
+
+  local ancien="$1"
+  local nouveau="$2"
+
+  # Pour macOS : utilise sed -i ''
+  grep -rl --exclude-dir={tmp,log,node_modules,storage} "$ancien" . | xargs sed -i '' "s/$ancien/$nouveau/g"
+}

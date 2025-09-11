@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'awesome_print'
+require 'thor'
+require 'sqlite3'
+
+DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), 'db/daily.sqlite'))
+
+class String
+  def red;  "\e[31m#{self}\e[0m" end
+  def cyan; "\e[36m#{self}\e[0m" end
+end
+
+class Daily < Thor
+
+  desc 'current CITY', 'display current weather for CITY'
+  def current
+    toto = DB.execute("SELECT * FROM tasks LIMIT 3")
+    puts toto
+    puts "TODO LIST".red
+    puts "TODO LIST".cyan
+  end
+end
+
+Daily.start(ARGV)
+
+# CREATE TABLE tasks (
+#   column_1 integer,
+#   column_2 string
+# );
