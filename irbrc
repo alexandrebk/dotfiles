@@ -23,18 +23,41 @@ class String
 end
 
 if defined?(Rails)
+  def update_password(resource, password = "password")
+    resource.password = password
+    resource.password_confirmation = password
+    resource.save!(validate: false)
+    "Password updated for #{resource.email}"
+  end
+
   project_name = File.basename(Dir.pwd).cyan
   environment  = ENV['RAILS_ENV'].red
 
   prompt = "#{project_name}[#{environment}]"
 
-  IRB.conf[:PROMPT] ||= {}
-  IRB.conf[:PROMPT][:RAILS] = {
-    :PROMPT_I => "#{prompt} %03n > ", # myproject[]staging 001 >
-    :PROMPT_S => "#{prompt} %03n * ", # myproject[]staging 001 *
-    :PROMPT_C => "#{prompt} %03n ? ", # myproject[]staging 001 ?
-    :RETURN   => "=> %s\n"
-  }
+  if defined?(Pry)
+    # Pry-specific tweaks here
+    Pry.config.prompt = Pry::Prompt.new(
+      :rails,                      # a name for your prompt
+      "Rails console with custom prompt",
+      [
+        ->(_target, nest_level, _pry) { "#{prompt} #{nest_level.to_s.rjust(3)} > " },
+        ->(_target, nest_level, _pry) { "#{prompt} #{nest_level.to_s.rjust(3)} * " },
+        ->(_target, nest_level, _pry) { "#{prompt} #{nest_level.to_s.rjust(3)} ? " }
+      ]
+    )
+    Pry.config.prompt_name    = :rails
+    Pry.config.prompt         = Pry.config.prompt
+  else
+    # IRB-specific tweaks here
+    IRB.conf[:PROMPT] ||= {}
+    IRB.conf[:PROMPT][:RAILS] = {
+      :PROMPT_I => "#{prompt} %03n > ", # myproject[]staging 001 >
+      :PROMPT_S => "#{prompt} %03n * ", # myproject[]staging 001 *
+      :PROMPT_C => "#{prompt} %03n ? ", # myproject[]staging 001 ?
+      :RETURN   => "=> %s\n"
+    }
 
-  IRB.conf[:PROMPT_MODE] = :RAILS
+    IRB.conf[:PROMPT_MODE] = :RAILS
+  end
 end
