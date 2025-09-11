@@ -1,9 +1,19 @@
 {
 	"always_show_minimap_viewport": false,
+	"binary_file_patterns":
+	[
+		"*.js.map",
+		"*.min.js"
+	],
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"detect_indentation": false,
 	"draw_white_space": true,
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.js.map",
+		"*.min.js"
+	],
 	"folder_exclude_patterns":
 	[
 		"tmp",
@@ -18,9 +28,11 @@
 		"node_modules",
 		"dist",
 		"public/packs",
-		"coverage"
+		"coverage",
+		"app/assets/builds",
+		"public/assets"
 	],
-	"font_size": 19,
+	"font_size": 18,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
