@@ -7,6 +7,41 @@ youtube () {
   open "https://www.youtube.com/results?search_query=${query}"
 }
 
+cleaning () {
+  # allez dans le dossier capsens
+  cd ~/code/capsens
+  # aller chercher tous les sous dossier
+  # for i in "$*"
+  # do
+  # done
+  # et faire les commandes suivantes
+  bundle install
+  rails log:clear
+  rails tmp:clear
+  # afficher le nom du dossier qui vient d'être nettoyé
+  # exemple: 'stomea cleaned'
+}
+
+cleaning() {
+  local base=~/code/capsens
+
+  cd "$base" || { echo "Impossible d'accéder à $base" >&2; return 1; }
+
+  for dir in */; do
+    if [ -d "$dir" ]; then
+      echo "→ Nettoyage de ${dir%/}…"
+      cd "$dir" || { echo "  Échec cd dans $dir" >&2; continue; }
+      # bundle install --quiet
+      rails log:clear
+      rails tmp:clear
+      cd ..
+      echo "${dir%/} cleaned"
+      echo
+    fi
+  done
+}
+
+
 # Get External IP / local IPs
 
 alias ip="curl ipinfo.io/ip"
@@ -54,11 +89,19 @@ alias packengers='cd ~/code/thepackengers/thepackengersapp'
 alias baltis='cd ~/code/capsens/baltis'
 alias stomea='cd ~/code/capsens/Stomea'
 alias dummy='cd ~/code/capsens/dummy-invest-locatif'
+alias raizers='cd ~/code/capsens/raizers'
+alias archinvest='cd ~/code/capsens/archinvest'
+alias matis='cd ~/code/capsens/matis'
+alias polyflame='cd ~/code/capsens/Polyflame'
+alias lpb='cd ~/code/capsens/la-premiere-brique'
+alias fundkiss='cd ~/code/capsens/fundkiss'
+alias dojo='cd ~/code/capsens/dojo'
+alias intra='cd ~/code/capsens/intranet'
+alias alcov='cd ~/code/capsens/alcov'
+alias tokimo='cd ~/code/capsens/tokimo'
+alias impact='cd ~/code/capsens/impact'
 alias capsens='cd ~/code/capsens'
 
-# Browser
-
-alias podcast='open https://www.bbc.co.uk/sounds/series/p02nrsln'
 
 # Miscellaneous
 
