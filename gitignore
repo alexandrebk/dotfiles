@@ -21,3 +21,5 @@ config/initializers/abk.rb
 
 *.sublime-project
 *.sublime-workspace
+
+lib/generators/
