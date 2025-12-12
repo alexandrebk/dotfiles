@@ -37,9 +37,40 @@
 
   m = checkout master
   d = checkout develop
+  s = checkout staging
 
   # Removes a file from the index
   unstage = reset HEAD --
+
+  pr = "!f() { \
+    branch=$(git symbolic-ref --short HEAD); \
+    repo=$(git remote get-url origin | sed -E 's#(git@|https://)([^:/]+)[:/]([^/]+)/([^/.]+)(\\.git)?#\\3/\\4#'); \
+    url=\"https://github.com/$repo/compare/staging...$branch?expand=1&assignees=alexandrebk\"; \
+    echo $url; \
+    open $url; \
+  }; f"
+
+  story = "!f() { \
+    if [ -z \"$1\" ]; then echo '❌  Usage: git story <numero>'; exit 1; fi; \
+    repo=$(git remote get-url origin | sed -E 's#(git@|https://)([^:/]+)[:/]([^/]+)/([^/.]+)(\\.git)?#\\3/\\4#'); \
+    url=\"https://github.com/$repo/pulls?q=$1\"; \
+    echo \"$url\"; \
+    open \"$url\"; \
+  }; f"
+
+  prs = "!f() { \
+    repo=$(git remote get-url origin | sed -E 's#(git@|https://)([^:/]+)[:/]([^/]+)/([^/.]+)(\\.git)?#\\3/\\4#'); \
+    url=\"https://github.com/$repo/pulls/assigned/alexandrebk\"; \
+    echo \"$url\"; \
+    open \"$url\"; \
+  }; f"
+
+  commits = "!f() { \
+    repo=$(git remote get-url origin | sed -E 's#(git@|https://)([^:/]+)[:/]([^/]+)/([^/.]+)(\\.git)?#\\3/\\4#'); \
+    url=\"https://github.com/$repo/commit/$1\"; \
+    echo \"$url\"; \
+    open \"$url\"; \
+  }; f"
 
 [help]
   autocorrect = 1
