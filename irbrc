@@ -1,14 +1,15 @@
 puts "-------------------"
 puts "Loadind .irbrc file"
+puts "-------------------"
 
-puts "Adding Object#local_methods"
+puts "Adding Object#local_methods (Project.last.local_methods)"
 class Object
   def local_methods
     (methods - Object.instance_methods).sort
   end
 end
 
-puts "Adding pbcopy(_)"
+puts "Adding pbcopy(string)"
 def pbcopy(data)
   IO.popen('pbcopy', 'w') { _1.write(data) }
   "Data copied in your clipboard"
@@ -26,6 +27,8 @@ class String
 end
 
 if defined?(Rails)
+  puts "Adding update_password(ressource, password = 'password')"
+
   def update_password(resource, password = "password")
     resource.password = password
     resource.password_confirmation = password

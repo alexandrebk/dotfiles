@@ -32,7 +32,7 @@
 		"app/assets/builds",
 		"public/assets"
 	],
-	"font_size": 18,
+	"font_size": 16,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":

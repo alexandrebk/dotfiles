@@ -196,6 +196,13 @@ nnoremap <Left>  3<C-w><
 nnoremap <Right> 3<C-w>>
 nnoremap <C-g> :NERDTreeToggle<cr>
 
+" Better navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+
 " Tabularize mapping
 noremap \= :Tabularize /=<CR>
 noremap \: :Tabularize /^[^:]*:\zs/l0l1<CR>
