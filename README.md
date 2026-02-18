@@ -94,6 +94,8 @@ brew install tree
 brew install ack
 brew cask install whatsapp
 brew install cloc
+brew install bat
+brew install git-delta
 ```
 
 ---
@@ -144,3 +146,6 @@ Installer bat (`brew install bat`) pour pouvoir utiliser l'alias ci-dessous
 ```
 alias cat="bat"
 ```
+
+
+## Brew install
