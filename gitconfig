@@ -10,9 +10,9 @@
   remote = yellow
 
 [core]
-  pager = less -FRSX
+  pager = delta
 	editor = '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -n -w
-	excludesfile = /Users/alexandrebouvier/.gitignore
+	excludesfile = ~/.gitignore
 	# editor = 'vim'
 
 [alias]
@@ -90,4 +90,4 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	template = /Users/alexandrebouvier/.gitmessage.txt
+	template = ~/.gitmessage.txt
