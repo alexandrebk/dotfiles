@@ -6,7 +6,7 @@ ZSH_THEME="robbyrussell"
 
 echo 'oh-my-zsh plugins'
 # Useful oh-my-zsh plugins
-plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+plugins=(git gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search kubectl)
 
 echo 'Prevent Homebrew from reporting'
 # (macOS-only) Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/docs/Analytics.md
@@ -67,6 +67,7 @@ echo 'export Path bin for Rails'
 # So instead of running `bin/rails` like the doc says, just run `rails`
 # Same for `./node_modules/.bin` and nodejs
 export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 echo 'Install the macvim shell'
 ### Install the macvim shell
@@ -120,7 +121,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Scalingo auto completion
 # source ~/.zsh/completion/scalingo_complete.zsh
 
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@18bin:$PATH"
 # All files for
 export PATH="$HOME/code/alexandrebk/dotfiles/bin:$PATH"
 echo 'Setup loaded from zshrc'
@@ -140,3 +141,4 @@ function replace() {
   # Pour macOS : utilise sed -i ''
   grep -rl --exclude-dir={tmp,log,node_modules,storage} "$ancien" . | xargs sed -i '' "s/$ancien/$nouveau/g"
 }
+
